@@ -2,11 +2,11 @@
 
 <img src="https://capsule-render.vercel.app/api?type=wave&color=0:0D1117,50:161B2E,100:0D1117&height=200&section=header&text=SIOMAI0-HI&fontSize=55&fontColor=00F5FF&animation=fadeIn&fontAlignY=38" width="100%" alt="Header banner" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=00F5FF&center=true&vCenter=true&width=600&lines=Hi+there!+I+am+Siomai0-hi;Computer+Science+Student;Currently+debugging+life.exe;Turning+coffee+into+working+code" alt="Typing animation" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=00F5FF&center=true&vCenter=true&width=600&lines=Hi+there!+I+am+M.Davaajargal;AI+MUST+Student;Currently+debugging+life.exe;Turning+coffee+into+working+code" alt="Typing animation" />
 
 <br>
 
-<img src="https://komarev.com/ghpvc/?username=Siomai0-hi&label=PROFILE+VIEWS&color=00F5FF&style=for-the-badge" alt="Profile views" />
+<img src="https://komarev.com/ghpvc/?username=M.Davaajargal&label=PROFILE+VIEWS&color=00F5FF&style=for-the-badge" alt="Profile views" />
 <img src="https://img.shields.io/github/followers/Siomai0-hi?label=FOLLOW&style=for-the-badge&color=FF2E9F&logo=github&logoColor=white" alt="GitHub followers" />
 <img src="https://img.shields.io/badge/STATUS-Compiling_Dreams-39FF14?style=for-the-badge" alt="Status" />
 
