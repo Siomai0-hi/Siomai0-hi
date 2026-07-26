@@ -17,9 +17,9 @@
 ### `$ whoami`
 
 ```yaml
-name:      Siomai0-hi
-role:      [Your field — e.g. Computer Science Student]
-based_in:  [Your city / country]
+name:      M.Davaajargal
+role:      [Your field — e.g. AI student, MUST]
+based_in:  [Ulaanbaatar / Mongolia]
 currently: Learning by building, one broken build at a time
 fun_fact:  [Something true, weird, or fun about you]
 motto:     "Ship it, then understand it."
