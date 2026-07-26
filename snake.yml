@@ -1,0 +1,45 @@
+# Contribution Snake — GitHub Action
+#
+# 📍 Where this goes: .github/workflows/snake.yml inside your Siomai0-hi/Siomai0-hi repo
+# What it does: once a day (and on every push to main), it turns your contribution
+# graph into an animated snake and publishes it to an "output" branch as an SVG.
+#
+# After it has run once, show it off in your README with:
+# ![Contribution Snake](https://raw.githubusercontent.com/Siomai0-hi/Siomai0-hi/output/github-contribution-grid-snake.svg)
+
+name: Generate Contribution Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate snake animation
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg?color_snake=#00F5FF&color_dots=#0D1117,#0E4429,#006D32,#26A641,#39FF14
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy to output branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: output
+          commit_message: "Update contribution snake"
