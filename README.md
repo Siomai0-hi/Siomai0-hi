@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Header Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:161B2E,100:00F5FF&height=220&section=header&text=M.%20DAVAAJARGAL&fontSize=52&fontColor=00F5FF&animation=fadeIn&fontAlignY=36&desc=Artificial%20Intelligence%20%7C%20Deep%20Learning%20%7C%20MUST&descAlignY=60&descAlign=50&descSize=18&descColor=C9D1D9" width="100%" alt="Header Banner" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:161B2E,100:00F5FF&height=220&section=header&text=M.%20DAVAAJARGAL&fontSize=52&fontColor=00F5FF&animation=fadeIn&fontAlignY=36&desc=Artificial%20Intelligence%20%7C%20%20%20%7C%20MUST&descAlignY=60&descAlign=50&descSize=18&descColor=C9D1D9" width="100%" alt="Header Banner" />
 
 <!-- Typing Animation -->
 <a href="https://github.com/Siomai0-hi">
