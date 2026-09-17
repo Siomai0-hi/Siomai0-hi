@@ -45,73 +45,8 @@ philosophy:      "The best way to understand intelligence is to synthesize it."
 
 ---
 
-### `$ ls -la ~/skills`
 
-<div align="center">
 
-#### 🧠 Artificial Intelligence & Data Science
-<img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,opencv,sklearn,pandas,numpy&theme=dark" alt="AI and Data Science Stack" />
-
-<br>
-
-#### 💻 Programming & Languages
-<img src="https://skillicons.dev/icons?i=python,cpp,c,java,js,ts,bash&theme=dark" alt="Programming Languages" />
-
-<br>
-
-#### 🌐 Web & API Technologies
-<img src="https://skillicons.dev/icons?i=html,css,tailwind,react,fastapi,nodejs&theme=dark" alt="Web Technologies" />
-
-<br>
-
-#### 🛠️ Tools, Platforms & DevOps
-<img src="https://skillicons.dev/icons?i=linux,ubuntu,git,github,vscode,docker,postman&theme=dark" alt="Tools and Platforms" />
-
-</div>
-
----
-
-### `$ cat ~/research_and_projects.md`
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>🔍 Areas of Focus</h4>
-      <ul>
-        <li><b>Computer Vision:</b> Real-time object recognition, image feature extraction, and neural vision pipelines.</li>
-        <li><b>Mongolian NLP & LLMs:</b> Processing, tokenization, and language model fine-tuning for low-resource Mongolian text.</li>
-        <li><b>Deep Learning:</b> Convolutional and transformer-based architectures for multi-modal tasks.</li>
-        <li><b>Concurrent Programming:</b> Scalable, multi-threaded pipelines for computational throughput.</li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <h4>🎯 Current Goals</h4>
-      <ul>
-        <li>🚀 Train & deploy production-ready machine learning models.</li>
-        <li>📚 Deepen research in foundational AI & transformer mechanics.</li>
-        <li>♟️ Develop intelligent agents, algorithms, and interactive apps.</li>
-        <li>🤝 Collaborate on open-source AI & software engineering projects.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
----
-
-### `$ ./stats.sh --realtime`
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Siomai0-hi&show_icons=true&title_color=00F5FF&icon_color=FF2E9F&text_color=C9D1D9&bg_color=0D1117&border_color=00F5FF&border_radius=12" alt="Siomai0-hi GitHub stats" height="175" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Siomai0-hi&layout=compact&title_color=00F5FF&text_color=C9D1D9&bg_color=0D1117&border_color=00F5FF&border_radius=12" alt="Siomai0-hi Top languages" height="175" />
-
-<br><br>
-
-<img src="https://streak-stats.demolab.com/?user=Siomai0-hi&theme=dark&background=0D1117&border=00F5FF&stroke=00F5FF&ring=00F5FF&fire=FF2E9F&currStreakLabel=00F5FF&borderRadius=12" alt="Siomai0-hi GitHub streak" />
-
-</div>
-
----
 
 ### `$ ./snake --render-activity`
 
