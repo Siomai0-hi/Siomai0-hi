@@ -27,20 +27,19 @@
 
 ```yaml
 identity:
-  name:          M. Davaajargal (М. Даваажаргал)
+  name:          M. Davaajargal
   handle:        Siomai0-hi
   education:     Mongolian University of Science and Technology (MUST / ШУТИС)
   major:         Artificial Intelligence (Хиймэл оюун ухаан)
-  location:      Ulaanbaatar, Mongolia 🇲🇳
+  location:      Ulaanbaatar, Mongolia 
 
 current_interests:
-  - Deep Learning & Neural Architectures
   - Computer Vision (Object Detection, Image Segmentation)
   - Natural Language Processing (Mongolian NLP & LLM Fine-tuning)
   - Intelligent Systems & Concurrent Programming
 
 status:          "Compiling dreams, optimizing gradients & building smart apps"
-philosophy:      "The best way to understand intelligence is to synthesize it."
+philosophy:      "Do or die."
 ```
 
 ---
