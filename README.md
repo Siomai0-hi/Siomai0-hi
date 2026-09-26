@@ -40,18 +40,6 @@ philosophy:      "Do or die."
 
 ---
 
-### `$ ls ./projects`
-
-| Project | Description | Stack |
-|---|---|---|
-| **[Mongolian Chess Analysis](https://github.com/Siomai0-hi/chess_project_prototype)** | AI-native chess analysis platform — a TypeScript monorepo with web + mobile clients, an Express/Prisma backend, a Stockfish engine module and a shared chess engine package. | `TypeScript` `Node.js` `Express` `Prisma` `React Native` `Vite` `Tailwind` |
-| **[CafeWeb](https://github.com/Siomai0-hi/CafeWeb)** | Full-stack cafe web application with a Spring Boot backend and server-rendered frontend. | `Java 21` `Spring Boot` `Thymeleaf` `Maven` |
-| **[Wallpaper Switcher](https://github.com/Siomai0-hi/wallpaper-switcher)** | Nord-themed `rofi` wallpaper picker with cycling and import tools for KDE Plasma — works on both Wayland and X11. ShellCheck-clean with CI. | `Shell` `Bash` `rofi` `KDE Plasma` |
-| **[ZKH Presentation](https://github.com/Siomai0-hi/web_zohiomj)** | Personal presentation website (танилцуулга). | `HTML5` `CSS3` |
-| **[Student Chatbot](https://github.com/Siomai0-hi/Chatbot)** | Python student assistant chatbot with a separate backend and frontend. | `Python` |
-
----
-
 ### `$ cat stack.txt`
 
 ```text
