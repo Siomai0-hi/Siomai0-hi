@@ -40,18 +40,7 @@ philosophy:      "Do or die."
 
 ---
 
-### `$ cat stack.txt`
 
-```text
-languages    TypeScript · Python · Java · JavaScript · HTML/CSS · Shell · SQL
-frontend     React Native · Next.js · Vite · Tailwind CSS · Thymeleaf
-backend      Node.js · Express · Spring Boot · REST
-data         Prisma · SQL
-tooling      GitHub Actions · Vercel · Maven · npm workspaces · ShellCheck
-linux        Arch Linux · KDE Plasma (Wayland) · rofi
-```
-
----
 
 ### `./snake --render-activity`
 
