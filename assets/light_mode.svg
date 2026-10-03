@@ -9,40 +9,40 @@
     <text x="16" y="25">                                        </text>
     <text x="16" y="41">                                        </text>
     <text x="16" y="57">                                        </text>
-    <text x="16" y="73">               %%%%%%###*               </text>
-    <text x="16" y="89">            %@@@@@@%%%%##***            </text>
-    <text x="16" y="105">          %@@@@@@@@@%%%###****          </text>
-    <text x="16" y="121">         %@@@@@@@@@%%%%###*****         </text>
-    <text x="16" y="137">        %%@@@@@@@@%%%%%###******        </text>
-    <text x="16" y="153">       #%%%%%@%%%%%%%####********       </text>
-    <text x="16" y="169">       ##%%%%%%%@@%###@@**+++=---       </text>
-    <text x="16" y="185">       *########@@###*@@*++==----       </text>
-    <text x="16" y="201">       +*****#*******++++==--::::       </text>
-    <text x="16" y="217">        =++++++++++++====--:::::        </text>
-    <text x="16" y="233">         -===========---:::::::         </text>
-    <text x="16" y="249">          :------++-:==:......          </text>
-    <text x="16" y="265">            ................            </text>
-    <text x="16" y="281">               ..........               </text>
-    <text x="16" y="297">                 ::::::                 </text>
-    <text x="16" y="313">                 ::::::                 </text>
-    <text x="16" y="329">                 ::----                 </text>
-    <text x="16" y="345">              --------------            </text>
-    <text x="16" y="361">          ----------------------        </text>
-    <text x="16" y="377">     ::::::::::::::::::::::::::::::::   </text>
-    <text x="16" y="393">  ::::::::::::::::::::::::::::::::::::::</text>
-    <text x="16" y="409">  ::::::::::::::::::::::::::::::::::::::</text>
-    <text x="16" y="425"> :::::::::::::::::::::::::::::::::::::: </text>
-    <text x="16" y="441"> :::::::::::::::::::::::::::::::::::::: </text>
-    <text x="16" y="457"> :::::::::::::::::::::::::::::::::::::: </text>
-    <text x="16" y="473"> :::::::::::::::::::::::::::::::::::::: </text>
-    <text x="16" y="489"> ...................................... </text>
+    <text x="16" y="73">                                        </text>
+    <text x="16" y="89">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀</text>
+    <text x="16" y="105">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+    <text x="16" y="121">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠖⠃⠀⠀⠀⡁⠀⠀⠀⠀⠀⠐⠆⠀⠀⠀⠀⠀⠀⠁</text>
+    <text x="16" y="137">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠁⠀⠀⠘⠁⢀⠀⠀⠀⠀⢈⠓⠂⠠⡄⠀⠈⠀⠀⠀⠀⠀⠀</text>
+    <text x="16" y="153">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠁⠀⠠⡚⠁⢀⣙⣀⣈⡩⠬⢁⠀⢑⠶⠤⡆⠤⡀⠀⠀⠀⠀</text>
+    <text x="16" y="169">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⢠⠀⠀⣶⠃⠗⣡⣶⣮⣿⡿⠿⠿⢿⣿⣷⣶⣤⣤⠤⠴⠦⠬⣤⣤⠄⣉</text>
+    <text x="16" y="185">⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠁⡀⡸⠁⣰⣿⡿⠛⠋⣁⡀⠤⠤⢄⡀⠈⠛⢯⣿⣟⣾⣶⣶⣮⣭⣵⣾</text>
+    <text x="16" y="201">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⢠⠳⡧⣻⡿⠋⢀⠒⠉⠀⠀⠀⠀⠀⠀⠉⠢⠀⠀⠙⠛⣻⣿⣿⣿⢿⣿</text>
+    <text x="16" y="217">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⢠⣧⠓⣾⣿⠁⠀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⢦⣠⣾⣿⠿⣿⣿⣿⡿</text>
+    <text x="16" y="233">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠂⢃⣸⣿⠇⢠⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣿⠟⢿⠁⠸⡿⣿⣯⡶</text>
+    <text x="16" y="249">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⢘⡄⠘⣿⣿⠀⠸⡀⠀⠀⠀⠀⠀⢀⣀⣴⣾⣿⡿⡟⡋⠐⡇⠀⢸⣿⣿⠃⠀</text>
+    <text x="16" y="265">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢡⠘⢰⣿⡿⡆⠀⣇⠀⣀⣠⣤⣶⣿⢷⢟⠻⠀⠈⠀⠀⠀⡇⠀⣼⣿⣿⠂⠀</text>
+    <text x="16" y="281">⠀⠀⠀⠀⠀⠀⠀⠀⢀⠔⢀⡴⢯⣾⠟⡏⢀⣠⣿⣿⣿⣟⢟⡋⠅⠘⠉⠀⠀⠀⠀⢀⠀⠁⢠⣿⣟⠃⠀⠁</text>
+    <text x="16" y="297">⠀⠀⠀⠀⠀⠀⠀⠀⢠⠞⣻⣷⡿⢙⣩⣶⡿⠿⠛⠉⠑⢡⡁⠀⠀⠀⠀⠀⠀⢀⠔⠁⠀⣰⣿⣿⡟⠀⠀⠀</text>
+    <text x="16" y="313">⠀⠀⠀⠀⠀⠀⣡⣾⣥⣾⢫⡦⠾⠛⠙⠉⠀⠀⢀⣀⠀⠈⠙⠓⠦⠤⠤⠀⠘⠁⢀⡤⣾⡿⠏⠁⠀⠀⠀⠀</text>
+    <text x="16" y="329">⠀⠀⠀⠔⣴⣾⣿⣿⢟⢝⠢⠃⢀⣤⢴⣾⣮⣷⣶⢿⣶⡤⣐⡀⠀⣠⣤⢶⣪⣿⣿⡿⠟⠀⠀⠀⠀⠀⠀⠀</text>
+    <text x="16" y="345">⠀⡀⣦⣾⡿⡛⠵⠺⢈⡠⠶⠿⠥⠥⡭⠉⠉⢱⡛⠻⠿⣿⣿⣿⣿⣿⠿⠿⠿⠟⠭⠛⠂⠀⠀⠀⠀⠀⠀⠀</text>
+    <text x="16" y="361">⠕⣋⠝⠕⠐⠀⠔⠉⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠁⠉⠁⠁⠁⠁⠈⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀</text>
+    <text x="16" y="377">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+    <text x="16" y="393">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+    <text x="16" y="409">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+    <text x="16" y="425">                                        </text>
+    <text x="16" y="441">                                        </text>
+    <text x="16" y="457">                                        </text>
+    <text x="16" y="473">                                        </text>
+    <text x="16" y="489">                                        </text>
   </g>
   <g font-family="Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="16" fill="#0550ae" xml:space="preserve">
     <text x="412" y="30"><tspan fill="#a15c00">M. Davaajargal@Siomai0-hi</tspan><tspan fill="#57606a"> ────────────────────────────────</tspan></text>
     <text x="412" y="68"><tspan fill="#a15c00">OS:</tspan><tspan fill="#57606a"> .............. </tspan></text>
     <text x="652" y="68"><tspan fill="#0550ae">Arch Linux</tspan></text>
     <text x="412" y="87"><tspan fill="#a15c00">Uptime:</tspan><tspan fill="#57606a"> .............. </tspan></text>
-    <text x="652" y="87"><tspan id="uptime" fill="#0550ae">19 years, 1 months, 0 days</tspan></text>
+    <text x="652" y="87"><tspan id="uptime" fill="#0550ae">0 years, 0 months, 0 days</tspan></text>
     <text x="412" y="106"><tspan fill="#a15c00">Host:</tspan><tspan fill="#57606a"> .............. </tspan></text>
     <text x="652" y="106"><tspan fill="#0550ae">TODO</tspan></text>
     <text x="412" y="125"><tspan fill="#a15c00">Kernel:</tspan><tspan fill="#57606a"> .............. </tspan></text>
@@ -69,8 +69,8 @@
     <text x="412" y="391"><tspan fill="#a15c00">Discord:</tspan><tspan fill="#57606a"> .............. </tspan></text>
     <text x="652" y="391"><tspan fill="#0550ae">TODO</tspan></text>
     <text x="412" y="429"><tspan fill="#57606a">- </tspan><tspan fill="#a15c00">GitHub Stats</tspan><tspan fill="#57606a"> ───────────────────────────────────────────</tspan></text>
-    <text x="412" y="448"><tspan fill="#a15c00">Repos: </tspan><tspan id="repos" fill="#0550ae">7</tspan><tspan fill="#57606a"> {</tspan><tspan fill="#a15c00">Contributed: </tspan><tspan id="contributed" fill="#0550ae">1</tspan><tspan fill="#57606a">} | </tspan><tspan fill="#a15c00">Stars: </tspan><tspan id="stars" fill="#0550ae">0</tspan></text>
-    <text x="412" y="467"><tspan fill="#a15c00">Commits: </tspan><tspan id="commits" fill="#0550ae">0</tspan><tspan fill="#57606a"> | </tspan><tspan fill="#a15c00">Followers: </tspan><tspan id="followers" fill="#0550ae">3</tspan></text>
-    <text x="412" y="486"><tspan fill="#a15c00">Lines of Code on GitHub:</tspan><tspan fill="#57606a"> .. </tspan><tspan id="loc" fill="#0550ae">0</tspan><tspan fill="#57606a">  (+</tspan><tspan id="additions" fill="#1a7f37">0</tspan><tspan fill="#57606a">/-</tspan><tspan id="deletions" fill="#cf222e">0</tspan><tspan fill="#57606a">)</tspan></text>
+    <text x="412" y="448"><tspan fill="#a15c00">Repos: </tspan><tspan id="repos" fill="#0550ae"> </tspan><tspan fill="#57606a"> {</tspan><tspan fill="#a15c00">Contributed: </tspan><tspan id="contributed" fill="#0550ae"> </tspan><tspan fill="#57606a">} | </tspan><tspan fill="#a15c00">Stars: </tspan><tspan id="stars" fill="#0550ae"> </tspan></text>
+    <text x="412" y="467"><tspan fill="#a15c00">Commits: </tspan><tspan id="commits" fill="#0550ae"> </tspan><tspan fill="#57606a"> | </tspan><tspan fill="#a15c00">Followers: </tspan><tspan id="followers" fill="#0550ae"> </tspan></text>
+    <text x="412" y="486"><tspan fill="#a15c00">Lines of Code on GitHub:</tspan><tspan fill="#57606a"> .. </tspan><tspan id="loc" fill="#0550ae"> </tspan><tspan fill="#57606a">  (+</tspan><tspan id="additions" fill="#1a7f37"> </tspan><tspan fill="#57606a">/-</tspan><tspan id="deletions" fill="#cf222e"> </tspan><tspan fill="#57606a">)</tspan></text>
   </g>
 </svg>
