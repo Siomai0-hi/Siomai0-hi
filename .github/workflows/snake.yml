@@ -1,0 +1,47 @@
+name: Generate Snake Contribution Animation
+
+# Regenerates the contribution-snake SVGs on the `output` branch, which the
+# README embeds. Both themes are produced so the README can pick one with
+# prefers-color-scheme.
+
+on:
+  schedule:
+    # Once a day. 03:07 UTC rather than 00:00, which is the most contended
+    # slot on GitHub Actions and queues the longest.
+    - cron: "7 3 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      # The SVGs depend only on the workflow definition, not on README content,
+      # so a docs-only push does not need to regenerate them. The card workflow
+      # (build.yaml) does not touch the snake.
+      - ".github/workflows/snake.yml"
+
+jobs:
+  generate:
+    permissions:
+      # Needed to push the regenerated SVGs to the output branch.
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Generate github-contribution-grid-snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push github-contribution-grid-snake.svg to the output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
