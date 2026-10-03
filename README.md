@@ -1,81 +1,54 @@
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dark_mode.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/light_mode.svg">
+  <img alt="Terminal profile card for M. Davaajargal" src="assets/dark_mode.svg">
+</picture>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:161B2E,100:00F5FF&height=220&section=header&text=M.%20DAVAAJARGAL&fontSize=52&fontColor=00F5FF&animation=fadeIn&fontAlignY=36&desc=Artificial%20Intelligence%20%7C%20%20%7C%20MUST&descAlignY=60&descAlign=50&descSize=18&descColor=C9D1D9" width="100%" alt="Header Banner" />
+## What this card shows
 
-<a href="https://github.com/Siomai0-hi">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=4000&pause=1000&color=00F5FF&center=true&vCenter=true&multiline=true&width=680&height=170&lines=Hi+there!+%F0%9F%91%8B+I%27m+M.+Davaajargal+(Siomai);AI+%26+Computer+Science+Student+%40+MUST+%F0%9F%8E%93;Deep+Learning%2C+Computer+Vision+%26+NLP;Turning+data+%26+coffee+into+intelligent+models+%E2%98%95%E2%9A%A1" alt="Typing animation" />
-</a>
+Everything inside the image is generated, not hand-typed. The card has two
+sources and one updater:
 
-<br>
+| Piece | Made by | Refreshed by |
+|---|---|---|
+| ASCII portrait | `tools/make_ascii.py` or `tools/make_portrait.py` | only when you replace `me.jpg` |
+| Layout, colours, columns | `tools/build_svg.py` | only when you edit `tools/build_svg.py` |
+| Uptime, repos, stars, commits, followers, LOC | placeholder values in the SVG | `today.py`, daily via GitHub Actions |
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Siomai0-hi&label=PROFILE+VIEWS&color=00F5FF&style=for-the-badge" alt="Profile views" />
-  <img src="https://img.shields.io/github/followers/Siomai0-hi?label=FOLLOWERS&style=for-the-badge&color=FF2E9F&logo=github&logoColor=white" alt="GitHub followers" />
-  <img src="https://img.shields.io/badge/LOCATION-Ulaanbaatar%2C_MN-FF2E9F?style=for-the-badge&logo=google-maps&logoColor=white" alt="Location" />
-  <img src="https://img.shields.io/badge/UNIVERSITY-MUST-00F5FF?style=for-the-badge&logo=academia&logoColor=white" alt="University" />
-</p>
+Both themes come out of a single generator, so they cannot drift apart.
 
-</div>
+## Regenerating it yourself
 
----
+```bash
+pip install -r requirements.txt
 
-### `$ whoami --details`
+# Replace the ASCII portrait with your photo (40x30 characters).
+cp ~/path/to/me.jpg .
+python3 tools/make_ascii.py me.jpg
 
-```yaml
-identity:
-  name:          M. Davaajargal
-  handle:        Siomai0-hi
-  education:     Mongolian University of Science and Technology (MUST / ШУТИС)
-  major:         Artificial Intelligence (Хиймэл оюун ухаан)
-  location:      Ulaanbaatar, Mongolia
+# Rebuild both SVGs from the portrait plus the STATIC block.
+python3 tools/build_svg.py
 
-current_interests:
-  - Computer Vision (Object Detection, Image Segmentation)
-  - Natural Language Processing (Mongolian NLP & LLM Fine-tuning)
-  - Intelligent Systems & Concurrent Programming
+# Update the numbers using your real account.
+USER_NAME=Siomai0-hi ACCESS_TOKEN=*** python3 today.py
 
-status:          "Compiling dreams, optimizing gradients & building smart apps"
-philosophy:      "Do or die."
+# Check nothing overflowed or lost an id.
+python3 tools/verify_svg.py
 ```
 
----
+To preview the numbers without a token, `python3 today.py --mock` reads
+`tools/mock_data.json`.
 
+## Notes on the numbers
 
+- **Commits** is the trailing-12-month total GitHub shows on your profile, so it
+  matches what a visitor sees there.
+- **LOC** is a rolling 52-week sum from `/stats/code_frequency`, netted as
+  `additions - deletions`. GitHub has no all-time LOC figure, and this endpoint
+  excludes forks so upstream code is not counted twice.
+- **Stars** counts only repositories you own, not ones you contributed to.
 
-### `./snake --render-activity`
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Siomai0-hi/Siomai0-hi/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake" width="100%" />
-</div>
-
----
-
-### `./connect.sh --socials`
-
-<div align="center">
-
-<a href="https://github.com/Siomai0-hi" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=00F5FF" alt="GitHub" /></a>
-<a href="https://www.youtube.com/watch?v=qU9mHegkTc4&amp;list=RDTdrL3QxjyVw&amp;index=24" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" /></a>
-<a href="mailto:davkadavka617@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-
-<!-- TODO: add your real profiles once they exist
-<a href="https://linkedin.com/in/YOUR_HANDLE" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-<a href="https://instagram.com/YOUR_HANDLE" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-<a href="https://discord.gg/YOUR_INVITE" target="_blank"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+<!--
+Generated files. Edit the scripts, not these:
+  assets/dark_mode.svg, assets/light_mode.svg, assets/ascii.txt
 -->
-
-<br><br>
-
-<img src="https://readme-jokes.vercel.app/api?theme=radical&bgColor=0D1117&textColor=C9D1D9&qColor=00F5FF&aColor=FF2E9F&borderColor=00F5FF" alt="Tech joke" />
-
-</div>
-
----
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00F5FF,50:161B2E,100:0D1117&height=120&section=footer" width="100%" alt="Footer banner" />
-
-<sub>Designed with <a href="https://github.com/Siomai0-hi">M. Davaajargal</a> • Powered by Continuous Learning</sub>
-
-</div>

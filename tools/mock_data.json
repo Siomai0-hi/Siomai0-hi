@@ -1,0 +1,10 @@
+{
+  "_comment": "Fixtures for `python3 today.py --mock`. No token or network needed. These mirror the real figures from the GitHub API so the placeholder card is honest rather than impressive-sounding. The workflow overwrites them on its first successful run.",
+  "repos": 7,
+  "contributed": 1,
+  "stars": 0,
+  "commits": 0,
+  "followers": 3,
+  "additions": 0,
+  "deletions": 0
+}
