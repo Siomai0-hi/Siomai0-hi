@@ -60,7 +60,7 @@
     <text x="412" y="68"><tspan fill="#a15c00">OS:</tspan><tspan fill="#57606a"> .............. </tspan></text>
     <text x="652" y="68"><tspan fill="#0550ae">Arch Linux</tspan></text>
     <text x="412" y="87"><tspan fill="#a15c00">Uptime:</tspan><tspan fill="#57606a"> .............. </tspan></text>
-    <text x="652" y="87"><tspan id="uptime" fill="#0550ae">0 years, 0 months, 0 days</tspan></text>
+    <text x="652" y="87"><tspan id="uptime" fill="#0550ae">19 years, 2 months, 25 days</tspan></text>
     <text x="412" y="106"><tspan fill="#a15c00">Host:</tspan><tspan fill="#57606a"> .............. </tspan></text>
     <text x="652" y="106"><tspan fill="#0550ae">MUST</tspan></text>
     <text x="412" y="125"><tspan fill="#a15c00">Kernel:</tspan><tspan fill="#57606a"> .............. </tspan></text>
@@ -89,8 +89,8 @@
     <text x="412" y="410"><tspan fill="#a15c00">Facebook:</tspan><tspan fill="#57606a"> .............. </tspan></text>
     <text x="652" y="410"><tspan fill="#0550ae">facebook.com/davka.davka</tspan></text>
     <text x="412" y="448"><tspan fill="#57606a">- </tspan><tspan fill="#a15c00">GitHub Stats</tspan><tspan fill="#57606a"> ───────────────────────────────────────────</tspan></text>
-    <text x="412" y="467"><tspan fill="#a15c00">Repos: </tspan><tspan id="repos" fill="#0550ae"> </tspan><tspan fill="#57606a"> {</tspan><tspan fill="#a15c00">Contributed: </tspan><tspan id="contributed" fill="#0550ae"> </tspan><tspan fill="#57606a">} | </tspan><tspan fill="#a15c00">Stars: </tspan><tspan id="stars" fill="#0550ae"> </tspan></text>
-    <text x="412" y="486"><tspan fill="#a15c00">Commits: </tspan><tspan id="commits" fill="#0550ae"> </tspan><tspan fill="#57606a"> | </tspan><tspan fill="#a15c00">Followers: </tspan><tspan id="followers" fill="#0550ae"> </tspan></text>
-    <text x="412" y="505"><tspan fill="#a15c00">Lines of Code on GitHub:</tspan><tspan fill="#57606a"> .. </tspan><tspan id="loc" fill="#0550ae"> </tspan><tspan fill="#57606a">  (+</tspan><tspan id="additions" fill="#1a7f37"> </tspan><tspan fill="#57606a">/-</tspan><tspan id="deletions" fill="#cf222e"> </tspan><tspan fill="#57606a">)</tspan></text>
+    <text x="412" y="467"><tspan fill="#a15c00">Repos: </tspan><tspan id="repos" fill="#0550ae">8</tspan><tspan fill="#57606a"> {</tspan><tspan fill="#a15c00">Contributed: </tspan><tspan id="contributed" fill="#0550ae">10</tspan><tspan fill="#57606a">} | </tspan><tspan fill="#a15c00">Stars: </tspan><tspan id="stars" fill="#0550ae">0</tspan></text>
+    <text x="412" y="486"><tspan fill="#a15c00">Commits: </tspan><tspan id="commits" fill="#0550ae">109</tspan><tspan fill="#57606a"> | </tspan><tspan fill="#a15c00">Followers: </tspan><tspan id="followers" fill="#0550ae">3</tspan></text>
+    <text x="412" y="505"><tspan fill="#a15c00">Lines of Code on GitHub:</tspan><tspan fill="#57606a"> .. </tspan><tspan id="loc" fill="#0550ae">0</tspan><tspan fill="#57606a">  (+</tspan><tspan id="additions" fill="#1a7f37">0</tspan><tspan fill="#57606a">/-</tspan><tspan id="deletions" fill="#cf222e">0</tspan><tspan fill="#57606a">)</tspan></text>
   </g>
 </svg>
