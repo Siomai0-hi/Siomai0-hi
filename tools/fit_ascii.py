@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-Normalise assets/ascii.txt to the exact COLS x ROWS grid the SVG expects.
+Centre assets/ascii.txt on the card's character grid.
 
 Why this exists
     ascii.txt can be edited by hand in a browser ASCII-art converter, which
     produces whatever size the source image happened to be -- e.g. 51x21.
-    The card is laid out for a fixed 40x30 grid, so anything else either
-    overflows the left panel or leaves a gap. This script refits the art to
-    exactly 40x30 and nothing else: no redrawing, no re-shading, no judgement.
+    Short artwork uses the original 40x30 grid. Taller portraits use a finer
+    64x48 grid in the same physical space, retaining detail around the eyes.
 
 Strategy
     1. Trim fully blank border rows/columns so the art fills the frame.
@@ -30,9 +29,14 @@ import pathlib
 import sys
 
 COLS, ROWS = 40, 30
+PORTRAIT_GRID = (64, 48)
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent
 TARGET = ROOT / "assets" / "ascii.txt"
+
+
+def grid_size(lines: list[str]) -> tuple[int, int]:
+    return PORTRAIT_GRID if len(lines) > ROWS else (COLS, ROWS)
 
 
 def trim(lines: list[str]) -> list[str]:
@@ -97,19 +101,21 @@ def main() -> int:
         print(f"error: {TARGET} not found", file=sys.stderr)
         return 1
 
-    raw = TARGET.read_text(encoding="utf-8").rstrip("\n").split("\n")
+    raw = TARGET.read_text(encoding="utf-8").splitlines()
+    cols, rows = grid_size(raw)
     cur = (len(raw), max((len(r) for r in raw), default=0))
 
     if args.check:
-        ok = cur == (ROWS, COLS)
-        print(f"ascii.txt is {cur[0]}x{cur[1]}, want {ROWS}x{COLS} "
+        ok = cur[0] == rows and cur[1] <= cols
+        print(f"ascii.txt is {cur[0]}x{cur[1]}, grid {rows}x{cols} "
               f"[{'ok' if ok else 'needs refit'}]")
         return 0 if ok else 1
 
-    art = refit(raw, COLS, ROWS)
-    TARGET.write_text("\n".join(art) + "\n", encoding="utf-8")
+    art = refit(raw, cols, rows)
+    # Trailing spaces do not draw anything; keep the editable text ragged-right.
+    TARGET.write_text("\n".join(row.rstrip(" ") for row in art) + "\n", encoding="utf-8")
 
-    print(f"refit {cur[0]}x{cur[1]} -> {ROWS}x{COLS}  ({TARGET.relative_to(ROOT)})")
+    print(f"refit {cur[0]}x{cur[1]} -> {rows}x{cols}  ({TARGET.relative_to(ROOT)})")
     print(art)
     return 0
 

@@ -37,19 +37,17 @@ jobs:
 
       # ascii.txt is often replaced by hand (or by a browser ASCII-art
       # converter) at whatever size the source image happened to be. Refit it
-      # to the 40x30 grid the card is laid out for, then rebuild so a
-      # swapped-in portrait is actually reflected in the SVG.
+      # to the card's character grid before building both themes.
       - name: Fit ASCII art and rebuild SVG
         run: |
           python3 tools/fit_ascii.py
           python3 tools/build_svg.py
 
-      # Secret is passed through the environment, never written into the repo
-      # or echoed into the log. today.py reads ACCESS_TOKEN and USER_NAME.
+      # The workflow token can read public stats when no custom token is set.
       - name: Update card numbers
         env:
           USER_NAME: ${{ github.repository_owner }}
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN || github.token }}
           GITHUB_BIRTHDAY: "2007-09-03"
         run: python3 today.py
 

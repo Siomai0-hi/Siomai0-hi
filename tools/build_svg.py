@@ -27,7 +27,13 @@ Usage:
 from __future__ import annotations
 
 import pathlib
+from itertools import groupby
 from xml.sax.saxutils import escape
+
+if __package__:
+    from .fit_ascii import PORTRAIT_GRID, grid_size, refit
+else:
+    from fit_ascii import PORTRAIT_GRID, grid_size, refit
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -36,30 +42,29 @@ ASCII_FILE = ROOT / "assets" / "ascii.txt"
 # ── Static profile information ────────────────────────────────────────────────
 # Everything here is hand-maintained. Anything that changes on its own (uptime,
 # repo counts, stars, commits, followers, LOC) lives in today.py instead.
-#
-# TODO(owner): replace the TODO placeholders below with real values.
 STATIC = {
     "name": "M. Davaajargal",
     "username": "Siomai0-hi",
     "birthday": "2007-09-03",  # YYYY-MM-DD -- drives the Uptime line
     "os": "Arch Linux",
-    "host": "TODO",       # company
-    "kernel": "TODO",     # job title
-    "ide": "TODO",        # e.g. "VS Code · IntelliJ IDEA"
+    "host": "MUST",       # school or company
+    "kernel": "AI student",
+    "hardware": "HP Victus",
+    "ide": "Visual Studio Code",
     # Comma-separated rather than " · " so the longest line fits inside 985px.
     "prog_langs": "Java, Python, JavaScript, C++",
     "comp_langs": "HTML, CSS, JSON, YAML",
     "real_langs": "English, Mongolian",
-    "hobby_software": "TODO",
-    "hobby_hardware": "TODO",
+    "hobby_software": "Machine learning, Agentic AI",
+    "hobby_offline": "Chess, hiking",
     "email_personal": "davkadavka617@gmail.com",
-    "email_work": "TODO",
-    "linkedin": "TODO",
-    "discord": "TODO",
+    "github": "github.com/Siomai0-hi",
+    "website": "siomai0-hi.github.io",
+    "facebook": "facebook.com/davka.davka",
 }
 
 # ── Layout ────────────────────────────────────────────────────────────────────
-# 985 x 530 total. 40x30 ASCII art on the left, neofetch info block on the right.
+# 985 x 530 total. The portrait has its own type size, independent of the info panel.
 FONT_STACK = "Consolas, 'Liberation Mono', 'Courier New', monospace"
 FONT_SIZE = 16
 # Worst-case monospace advance (Courier New = 0.6em). Used to convert character
@@ -69,14 +74,17 @@ ADV = FONT_SIZE * 0.6  # 9.6px
 W, H = 985, 530
 
 ASCII_X = 16
-ASCII_COLS = 40   # must match COLS in make_ascii.py
-ASCII_ROWS = 30
-ASCII_Y0 = 25
-ASCII_LINE_H = 16  # 30 rows * 16 = 480px, ends at y=505
+ASCII_HEIGHT = 480
+# Photo tones run from shadow to highlight. Equivalent-weight strokes give
+# the hairline, eyelids and mouth directions as well as brightness.
+PHOTO_TONES = (
+    ".`", ",'", "-:", "^~_", "!|i", "/\\()", "rlct", "vun", "jxs+",
+    "CYJf", "yLak", "TzI7", "FSPZ", "oeG0", "UAEN", "dhKB", "8%Wm", "M#@",
+)
 
 PANEL_X = 412
 Y0 = 30
-LINE_H = 19  # 25 lines * 19 = 475px, ends at y=505
+LINE_H = 19  # 26 lines, with the last baseline at y=505
 
 # Character column where every value starts, measured from PANEL_X.
 VALUE_COL = 25
@@ -98,7 +106,7 @@ THEMES = {
         "key": "#ffa657",
         "value": "#a5d6ff",
         "muted": "#6e7681",
-        "ascii": "#a5d6ff",
+        "ascii": "#c4e2f9",
         "add": "#3fb950",
         "del": "#f85149",
         "term": "#c9d1d9",
@@ -109,7 +117,7 @@ THEMES = {
         "key": "#a15c00",
         "value": "#0550ae",
         "muted": "#57606a",
-        "ascii": "#0550ae",
+        "ascii": "#113965",
         "add": "#1a7f37",
         "del": "#cf222e",
         "term": "#24292f",
@@ -223,6 +231,7 @@ def build_lines() -> list:
         kv("Uptime", "0 years, 0 months, 0 days", "uptime"),
         kv("Host", STATIC["host"]),
         kv("Kernel", STATIC["kernel"]),
+        kv("Hardware", STATIC["hardware"]),
         kv("IDE", STATIC["ide"]),
         blank,
         kv("Languages.Programming", STATIC["prog_langs"]),
@@ -230,13 +239,13 @@ def build_lines() -> list:
         kv("Languages.Real", STATIC["real_langs"]),
         blank,
         kv("Hobbies.Software", STATIC["hobby_software"]),
-        kv("Hobbies.Hardware", STATIC["hobby_hardware"]),
+        kv("Hobbies.Offline", STATIC["hobby_offline"]),
         blank,
         rule("Contact"),
-        kv("Email.Personal", STATIC["email_personal"]),
-        kv("Email.Work", STATIC["email_work"]),
-        kv("LinkedIn", STATIC["linkedin"]),
-        kv("Discord", STATIC["discord"]),
+        kv("Email", STATIC["email_personal"]),
+        kv("GitHub", STATIC["github"]),
+        kv("Website", STATIC["website"]),
+        kv("Facebook", STATIC["facebook"]),
         blank,
         rule("GitHub Stats"),
         stats_repos(),
@@ -247,23 +256,55 @@ def build_lines() -> list:
 
 # ── Rendering ─────────────────────────────────────────────────────────────────
 
-def render_ascii(c: dict) -> str:
+def photo_ink(light: bool) -> dict[str, tuple[str, str]]:
+    """Select the glyph and ink strength for each source tone on this background."""
+    ink = {}
+    last = len(PHOTO_TONES) - 1
+    for index, marks in enumerate(PHOTO_TONES):
+        weight = last - index if light else index
+        glyphs = PHOTO_TONES[weight]
+        strength = weight / last
+        floor = 0.28 if light else 0.32
+        opacity = f"{floor + (1 - floor) * strength:.1f}"
+        for j, mark in enumerate(marks):
+            ink[mark] = (glyphs[j % len(glyphs)], opacity)
+    return ink
+
+
+def render_photo_row(row: str, ink: dict[str, tuple[str, str]]) -> str:
+    runs = []
+    glyphs = (ink[ch] if ch != " " else (" ", "") for ch in row.rstrip(" "))
+    for opacity, group in groupby(glyphs, key=lambda item: item[1]):
+        text = escape("".join(char for char, _ in group))
+        runs.append(f'<tspan fill-opacity="{opacity}">{text}</tspan>' if opacity else text)
+    return "".join(runs)
+
+
+def render_ascii(theme_name: str) -> str:
     """Left panel: the ASCII portrait, one <text> per row."""
     if not ASCII_FILE.exists():
         raise SystemExit(
             f"error: {ASCII_FILE} missing.\n"
             f"       Run: python3 tools/make_ascii.py me.jpg"
         )
-    rows = ASCII_FILE.read_text(encoding="utf-8").rstrip("\n").split("\n")
+    source = ASCII_FILE.read_text(encoding="utf-8").splitlines()
+    cols, height = grid_size(source)
+    rows = refit(source, cols, height)
+    ink = photo_ink(theme_name == "light")
+    toned = (cols, height) == PORTRAIT_GRID and set("".join(source)).issubset(ink.keys() | {" "})
+    size = ASCII_HEIGHT / height
+    top = (H - ASCII_HEIGHT) / 2
+    weight = "bold" if toned else "normal"
     out = [
-        f'  <g font-family="{FONT_STACK}" font-size="{FONT_SIZE}" '
-        f'fill="{c["ascii"]}" xml:space="preserve">'
+        f'  <g font-family="{FONT_STACK}" font-size="{size:g}" font-weight="{weight}" '
+        f'fill="{THEMES[theme_name]["ascii"]}" xml:space="preserve">'
     ]
     for i, row in enumerate(rows):
-        y = ASCII_Y0 + i * ASCII_LINE_H
+        y = top + (i + 0.8) * size
         # xml:space="preserve" keeps the leading/trailing spaces that shape the
         # portrait. Without it the XML parser collapses them and the art skews.
-        out.append(f'    <text x="{ASCII_X}" y="{y}">{escape(row)}</text>')
+        text = render_photo_row(row, ink) if toned else escape(row.rstrip(" "))
+        out.append(f'    <text x="{ASCII_X}" y="{y:g}">{text}</text>')
     out.append("  </g>")
     return "\n".join(out)
 
@@ -337,11 +378,9 @@ def render_svg(theme_name: str, lines: list, ascii_block: str) -> str:
 
 def main() -> int:
     lines = build_lines()
-    ascii_block = render_ascii(THEMES["dark"])
-
     for name, theme in THEMES.items():
         out = ROOT / "assets" / theme["file"]
-        out.write_text(render_svg(name, lines, ascii_block), encoding="utf-8")
+        out.write_text(render_svg(name, lines, render_ascii(name)), encoding="utf-8")
         print(f"wrote {out.relative_to(ROOT)}")
 
     # Overflow guard: no line may run past the right edge of the card.
